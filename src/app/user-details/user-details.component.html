@@ -1,0 +1,24 @@
+<p>
+user-details works!
+</p>
+Name :{{user?.name}}
+<br>
+Username:{{user?.username}}
+<br>
+Email:{{user?.email}}
+<br>
+<H1>User Alboum </H1>
+ <ul>
+ <li *ngFor="let album of user.album"> 
+   <h2> {{album.title}}</h2>
+   <br>
+      <div style="display:inline-block" *ngFor="let photo of album.photos">
+        <img [src]="photo.thumbnailUrl">
+      </div>
+   
+   </li>
+  
+
+    </ul>
+  <!-- <img [src]="alboum.thumbnailUrl"> -->
+
